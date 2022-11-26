@@ -1,0 +1,56 @@
+<a routerLink="/administracion/crear-producto" class="btn">Nuevo Producto</a>
+<table class="table responsive">
+    <thead>
+        <tr>
+        <th>
+            Producto
+        </th>
+        <th>
+            Precio
+        </th>
+        <th>
+            Stock
+        </th>
+        <th>
+            Foto
+        </th>
+        <!-- <th>
+            thumbnail
+        </th> -->
+        <th>
+            Caracteristicas
+        </th>
+        <th>
+            Descripcion
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of listadoRegistros">
+            <td>
+                {{p.nombre}}
+            </td>
+            <td>
+                {{p.precio}}
+            </td>
+            <td>
+                {{p.stock}}
+            </td>
+            <td>
+                <img src="{{p.foto}}" class="imagenProducto">
+            </td>
+                <!-- <td>
+                    {{p.thumbnail}}
+                </td> -->
+            <td>
+                {{p.caracteristicas}}
+            </td>
+            <td>
+                {{p.descripcion}}
+            </td>
+            <td>
+                <a routerLink="/administracion/editar-producto/{{p.id}}" class="btn">Editar Producto</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

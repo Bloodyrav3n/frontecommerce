@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col s22 l4 offset-14" id="login-page" class="row">
+      <div class="card grey lighten-3">
+        <div class="card-content">
+          <h4 class="card-title center-align">Añadir Productos</h4>
+          <form [formGroup]="fgvalidador" (ngSubmit)="GuardarProducto()" method="POST" action="fomulario-contacto.php">
+              <div class="input-field">
+                <label for="nombre" data-error="wrong" data-success="right">Nombre</label>
+                <input formControlName= "nombre" type="text" required />
+              </div>
+
+              <div class="input-field">
+                <label for="descripcion" data-error="wrong" data-success="right">descripcion</label>
+                <input formControlName= "descripcion" type="text" required />
+              </div>
+
+              <div class="input-field">
+                <label for="caracteristicas" data-error="wrong" data-success="right">caracteristicas</label>
+                <input formControlName= "caracteristicas" type="text" required />
+              </div>
+
+              <div class="input-field">
+                <label for="foto" data-error="wrong" data-success="right">foto</label>
+                <input formControlName= "foto" type="text" required />
+              </div>
+
+              <div class="input-field">
+               
+                <input formControlName= "thumbnail" type="text" />
+              </div>
+
+              <div class="input-field">
+                <label for="precio" data-error="wrong" data-success="right">precio</label>
+                <input formControlName= "precio" type="text" required />
+              </div>
+
+              <div class="input-field">
+                <label for="stock" data-error="wrong" data-success="right">stock</label>
+                <input formControlName= "stock" type="text" required />
+              </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <button [disabled]="!fgvalidador.valid" class="btn waves-effect waves-light col s12" name="action" type="submit">Guardar Producto</button>
+              </div>
+            </div>
+           
+          </form>
+        </div>
+      </div>
+  </div>
+   

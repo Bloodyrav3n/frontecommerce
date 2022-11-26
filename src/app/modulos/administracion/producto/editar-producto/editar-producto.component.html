@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col s22 l4 offset-14" id="login-page" class="row">
+      <div class="card grey lighten-3">
+        <div class="card-content">
+          <h4 class="card-title center-align">Actualizar Productos</h4>
+          <form [formGroup]="fgvalidador" (ngSubmit)="EditarProducto()" action="fomulario-contacto.php">
+            <input type="hidden" formControlName="id"/>
+              <div class="input-field">
+                <label for="nombre" class="active">Nombre</label>
+                <input formControlName= "nombre" type="text" required />
+              </div>
+
+              <div class="input-field">
+                <label for="descripcion" class="active">descripcion</label>
+                <input formControlName= "descripcion" type="text" required />
+              </div>
+
+              <div class="input-field">
+                <label for="caracteristicas" class="active">caracteristicas</label>
+                <input formControlName= "caracteristicas" type="text" required />
+              </div>
+
+              <div class="input-field">
+                <label for="foto" class="active">foto</label>
+                <input formControlName= "foto" type="text" required />
+              </div>
+
+              <div class="input-field">
+                <input formControlName= "thumbnail" type="text" type="hidden" class="active"/>
+              </div>
+
+              <div class="input-field">
+                <label for="precio" class="active">precio</label>
+                <input formControlName= "precio" type="text" required />
+              </div>
+
+              <div class="input-field">
+                <label for="stock" class="active">stock</label>
+                <input formControlName= "stock" type="text" required />
+              </div>
+
+            <div class="row">
+              <div class="input-field col s6">
+                <button [disabled]="!fgvalidador.valid" class="btn waves-effect waves-light col s12" name="action" type="submit">Editar Producto</button>
+              </div>
+            </div>
+          </form>
+          <form [formGroup]="fgvalidador" (ngSubmit)="EliminarProducto()" action="fomulario-contacto.php">
+            <div class="input-field col s6">
+              <button class="btn waves-effect waves-light col s12" name="action" type="submit2">Eliminar Producto</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
