@@ -48,7 +48,7 @@ export class EliminarProductoComponent implements OnInit {
     this.fgValidador.controls["nombre"].setValue(datos.nombre);
     this.fgValidador.controls["stock"].setValue(datos.stock);
     this.fgValidador.controls["foto"].setValue(datos.foto);
-    this.fgValidador.controls["thumbnail"].setValue(datos.thumbnail);
+    // this.fgValidador.controls["thumbnail"].setValue(datos.thumbnail);
   });
 }
 

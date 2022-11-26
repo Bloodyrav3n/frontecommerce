@@ -16,7 +16,7 @@ export class EditarProductoComponent {
     nombre: ['', [Validators.required]],
     descripcion: ['', [Validators.required]],
     caracteristicas: ['', [Validators.required]],
-    thumbnail: ['', [Validators.required]],
+    // thumbnail: ['', [Validators.required]],
     foto: ['', [Validators.required]],
     precio: ['', [Validators.required]],
     stock: ['', [Validators.required]],
@@ -38,7 +38,7 @@ export class EditarProductoComponent {
     this.fgvalidador.controls["nombre"].setValue(datos.nombre)
     this.fgvalidador.controls["descripcion"].setValue(datos.descripcion)
     this.fgvalidador.controls["caracteristicas"].setValue(datos.caracteristicas)
-    this.fgvalidador.controls["thumbnail"].setValue(datos.thumbnail)
+    // this.fgvalidador.controls["thumbnail"].setValue(datos.thumbnail)
     this.fgvalidador.controls["foto"].setValue(datos.foto)
     this.fgvalidador.controls["precio"].setValue(datos.precio)
     this.fgvalidador.controls["stock"].setValue(datos.stock)
@@ -49,7 +49,7 @@ export class EditarProductoComponent {
     let nombre = this.fgvalidador.controls['nombre'].value;
     let descripcion = this.fgvalidador.controls['descripcion'].value;
     let caracteristicas = this.fgvalidador.controls['caracteristicas'].value;
-    let thumbnail = this.fgvalidador.controls['thumbnail'].value;
+    // let thumbnail = this.fgvalidador.controls['thumbnail'].value;
     let foto = this.fgvalidador.controls['foto'].value;
     let precio = parseInt(this.fgvalidador.controls['precio'].value);
     let stock = parseInt(this.fgvalidador.controls['stock'].value);
@@ -57,7 +57,7 @@ export class EditarProductoComponent {
     p.nombre = nombre;
     p.descripcion = descripcion;
     p.caracteristicas = caracteristicas
-    p.thumbnail = thumbnail
+    // p.thumbnail = thumbnail
     p.foto = foto;
     p.precio = precio;
     p.stock = stock

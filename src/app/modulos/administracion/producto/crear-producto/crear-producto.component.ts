@@ -15,7 +15,7 @@ export class CrearProductoComponent implements OnInit {
     nombre: ['', [Validators.required]],
     descripcion: ['', [Validators.required]],
     caracteristicas: ['', [Validators.required]],
-    thumbnail: ['', [Validators.required]],
+    //  
     foto: ['', [Validators.required]],
     precio: ['', [Validators.required]],
     stock: ['', [Validators.required]],
@@ -34,7 +34,7 @@ export class CrearProductoComponent implements OnInit {
     let nombre = this.fgvalidador.controls['nombre'].value;
     let descripcion = this.fgvalidador.controls['descripcion'].value;
     let caracteristicas = this.fgvalidador.controls['caracteristicas'].value;
-    let thumbnail = this.fgvalidador.controls['thumbnail'].value;
+    // let thumbnail = this.fgvalidador.controls['thumbnail'].value;
     let foto = this.fgvalidador.controls['foto'].value;
     let precio = parseInt(this.fgvalidador.controls['precio'].value);
     let stock = parseInt(this.fgvalidador.controls['stock'].value);
@@ -42,7 +42,7 @@ export class CrearProductoComponent implements OnInit {
     p.nombre = nombre;
     p.descripcion = descripcion;
     p.caracteristicas = caracteristicas
-    p.thumbnail = thumbnail
+    // p.thumbnail = thumbnail
     p.foto = foto;
     p.precio = precio;
     p.stock = stock

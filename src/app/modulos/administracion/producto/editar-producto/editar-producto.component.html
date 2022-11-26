@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
     <div class="col s22 l4 offset-14" id="login-page" class="row">
       <div class="card grey lighten-3">
         <div class="card-content">
@@ -52,4 +52,72 @@
           </form>
         </div>
       </div>
-  </div>
+  </div> -->
+<h4 align="center">Editar Producto</h4>
+<div class="row">
+  <form [formGroup]="fgvalidador" class="col s12" (ngSubmit)="EditarProducto()">
+    <input type="hidden" formControlName="id" />
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">perm_contact_calendar</i>
+        <input formControlName="nombre" id="txtnombreproducto" type="text" class="validate"/>
+        <label class="active" for="txtnombreproducto">Nombre</label>
+      </div>
+      <div class="input-field col s6">
+        <i class="material-icons prefix">insert_link</i>
+        <input formControlName="foto" id="txtFoto" type="text" class="validate"/>
+        <label class="active" for="txtFoto">Imagen Producto</label>
+      </div>
+
+      
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">mode_edit</i>
+        <textarea formControlName="descripcion" id="icon_prefix2"class="materialize-textarea">
+</textarea>
+        <label class="active" for="icon_prefix2">Descripción</label>
+      </div>
+
+      <div class="input-field col s6">
+        <i class="material-icons prefix">mode_edit</i>
+        <textarea formControlName="caracteristicas" id="icon_prefix2"class="materialize-textarea">
+        </textarea>
+        <label class="active" for="icon_prefix2">Características</label>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="input-field col s4">
+        <i class="material-icons prefix">attach_money</i>
+        <input formControlName="precio" id="txtprecio" type="text" class="validate"/>
+        <label class="active" for="txtprecio">Precio</label>
+      </div>
+
+      <div class="input-field col s4">
+        <i class="material-icons prefix">arrow_upward</i>
+        <input formControlName="stock" id="txtstock" type="text" class="validate"/>
+        <label class="active" for="txtstock">Stock</label>
+      </div>
+      <!-- <div class="input-field col s6">
+        <i class="material-icons prefix">insert_link</i>
+        <input formControlName="thumbnail" id="txtThumbnail" type="text" class="validate"/>
+        <label class="active" for="txtThumbnail">Imagen Pequeña</label>
+      </div> -->
+
+    </div>
+      <div class="row" class="input-field col s6">
+        <button
+          [disabled]="!fgvalidador.valid" class="btn waves-effect waves-light col s5 "type="submit" name="action">Guardar<i class="material-icons right">send</i>
+        </button>
+      </div>
+
+      <form [formGroup]="fgvalidador" (ngSubmit)="EliminarProducto()">
+        <div class="row" class="input-field col s6">
+          <button [disabled]="!fgvalidador.valid" class="btn waves-effect waves-light2 col s5 center-align" type="auxclick" name="action">Eliminar Producto<i class="material-icons right" >send</i></button>
+        </div>
+      </form>
+  </form>
+</div>
