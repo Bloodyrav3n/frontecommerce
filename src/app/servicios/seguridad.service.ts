@@ -8,7 +8,8 @@ import { ModeloIdentificar } from '../modelos/identificar.modelo';
 })
 export class SeguridadService {
   
-  url = "http://localhost:3000";
+  // url = "http://localhost:3000";
+  url = "https://backendeco.onrender.com";
   
   datosUsuarioEnSesion = new BehaviorSubject<ModeloIdentificar>(new ModeloIdentificar());
 

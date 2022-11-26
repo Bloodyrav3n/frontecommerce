@@ -9,7 +9,9 @@ import { SeguridadService } from './seguridad.service';
   providedIn: 'root'
 })
 export class ProductoService {
-  url = "http://localhost:3000";
+  // url = "http://localhost:3000";
+  url = "https://backendeco.onrender.com";
+
   token: String = ""
   constructor(private http: HttpClient, private seguridadServicio: SeguridadService) {
     this.token = this.seguridadServicio.ObtenerToken()
